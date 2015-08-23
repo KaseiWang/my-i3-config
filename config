@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Terminus 11px
+font pango:Source Code Pro 12px
 
 new_window pixel 3
 focus_follows_mouse  no
@@ -20,7 +20,8 @@ client.unfocused          $gray2   $gray2   #FFFFFF   #000000
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtc
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+c kill
