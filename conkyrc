@@ -1,7 +1,7 @@
 background        no
 out_to_console 	  yes
 out_to_x	  no
-update_interval	  2
+update_interval	  1
 total_run_times	  0
 short_units	  yes
 pad_percents	  3
@@ -11,11 +11,14 @@ override_utf8_locale yes
 TEXT
 ,[{"full_text": " ❤ $cpu% ","color": "\#DC322F"},
   {"full_text": " ≣ [$membar] ", "color":"\#B58900"},
-  ${if_up wlp4s0}{"full_text": " ≈ ${wireless_essid wlp4s0} [${wireless_link_qual_perc wlp4s0}%] ","color":"\#33CC99"},
+  ${if_up wlp4s0}{"full_text": " ≈ ${wireless_essid wlp4s0} [${wireless_link_qual_perc wlp4s0}%]","color":"\#33CC99"},
+  {"full_text": " ↓${downspeed wlp4s0} ↑${upspeed wlp4s0} ", "color":"\#FFFE6A"},
   $else${if_up enp5s0}{"full_text": " ≈ enp5s0 ","color":"\#33CC99"},
+  {"full_text": " ↓${downspeed enp5s0} ↑${upspeed enp5s0} ", "color":"\#FFFE6A"},
   $else{"full_text": " ≈ no connection ","color":"\#33CC99"},$endif$endif
   {"full_text": " ☇ [$battery_percent%] ","color":"\#9933CC"},
-  {"full_text": " ♪ [${execpi 0.1 pactl list sinks | grep "Volume: f" | cut -d " " -f6}] ", "color":"\#268BD2"},
-  {"full_text": " ${time WW%V.%u, %b%d %a}"},
-  {"full_text": " ${time %H:%M} "}
+  {"full_text": " ♪ [${execpi 1 pactl list sinks | grep "Volume: f" | cut -d " " -f6}] ", "color":"\#268BD2"},
+  {"full_text": " ${time %b%d日 周%a}"},
+  {"full_text": " ${time %H:%M:%S} "},
+  {"full_text": ""}
 ]
