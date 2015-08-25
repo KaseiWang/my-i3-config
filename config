@@ -2,8 +2,9 @@ set $mod Mod4
 
 font pango:Source Code Pro 13px
 
-# enable fcitx
+# enable fcitx,nm-applet
 exec_always fcitx
+exec_always nm-applet
 
 new_window none
 focus_follows_mouse  no
@@ -30,7 +31,7 @@ bindsym $mod+Return exec terminator
 bindsym $mod+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec "dmenu_run -nb black -p run"
+bindsym $mod+p exec "dmenu_run -fn 'Source Code Pro-10.5'"
 
 bindsym $mod+Shift+p exec "~/.bin/pass-autotype-dmenu"
 
