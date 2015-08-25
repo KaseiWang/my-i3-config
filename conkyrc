@@ -10,7 +10,7 @@ override_utf8_locale yes
 
 TEXT
 # CPU
-,[{"full_text": " ❤ $cpu% ","color": "\#DC322F"},
+,[{"full_text": " ⌬ $cpu% ","color": "\#DC322F"},
 
 # MEM
   {"full_text": " ≣ [$membar] ", "color":"\#B58900"},
