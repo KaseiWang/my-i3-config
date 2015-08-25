@@ -6,6 +6,9 @@ font pango:Source Code Pro 13px
 exec_always fcitx
 exec_always nm-applet
 
+# Set Wallpaper
+feh --bg-scale /home/oumayo/Picture/ring.1920x1080.png
+
 new_window none
 focus_follows_mouse  no
 
