@@ -6,8 +6,8 @@ font pango:Source Code Pro 13px
 exec_always fcitx
 exec_always nm-applet
 
-# Set Wallpaper
-feh --bg-scale /home/oumayo/Picture/ring.1920x1080.png
+# wallpaper config
+exec_always "feh --bg-scale /home/oumayo/Picture/ring.1920x1080.png"
 
 new_window none
 focus_follows_mouse  no
@@ -140,7 +140,7 @@ bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$(synclient | awk '/Touch
 
 bindsym XF86Display exec "arandr"
 
-bindsym $mod+a exec "urxvtc -e alsamixer"
+bindsym $mod+a exec "terminator -e ncmpcpp"
 bindsym $mod+Shift+a exec "pavucontrol"
 
 bar {
