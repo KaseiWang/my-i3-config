@@ -7,6 +7,10 @@ exec_always compton
 exec_always fcitx
 exec_always nm-applet
 
+# natural scrolling
+exec_always synclient VertScrollDelta=-103
+exec_always synclient HorizScrollDelta=-103
+
 # wallpaper config
 exec_always "feh --bg-scale /home/oumayo/Picture/ring.1920x1080.png"
 
