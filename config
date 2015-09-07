@@ -2,10 +2,9 @@ set $mod Mod4
 
 font pango:Source Code Pro 13px
 
-# enable fcitx,nm-applet,compton
+# enable fcitx,compton
 exec_always compton
 exec_always fcitx
-exec_always nm-applet
 
 # natural scrolling
 exec_always synclient VertScrollDelta=-103
