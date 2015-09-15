@@ -30,7 +30,5 @@ TEXT
 
 # Time
   {"full_text": " ${time %b%d日 周%a}"},
-  {"full_text": " ${time %H:%M:%S} "},
-
-  {"full_text": ""}
+  {"full_text": " ${time %H:%M:%S} "}
 ]
