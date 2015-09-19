@@ -34,6 +34,9 @@ floating_modifier $mod
 #bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec terminator
 
+# web broswer
+bindsym $mod+1 exec chromium
+
 # kill focused window
 bindsym $mod+c kill
 
