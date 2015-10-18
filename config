@@ -3,7 +3,7 @@ set $mod Mod4
 font pango:Source Code Pro 13px
 
 # enable fcitx,compton
-exec_always compton
+#exec_always compton
 exec_always fcitx
 
 # natural scrolling
