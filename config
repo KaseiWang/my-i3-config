@@ -2,13 +2,8 @@ set $mod Mod4
 
 font pango:Source Code Pro 13px
 
-# enable fcitx,compton
-#exec_always compton
+# enable fcitx
 exec_always fcitx
-
-# natural scrolling
-exec_always synclient VertScrollDelta=-103
-exec_always synclient HorizScrollDelta=-103
 
 # wallpaper config
 exec_always "feh --bg-scale /home/oumayo/.wallpaper.png"
