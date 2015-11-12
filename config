@@ -9,7 +9,7 @@ exec_always fcitx
 exec_always "feh --bg-scale /home/oumayo/.wallpaper.png"
 
 # composition manager
-compton --config ~/.i3/compton.conf &
+exec_always compton -b --config ~/.i3/compton.conf
 
 new_window none
 focus_follows_mouse  no
