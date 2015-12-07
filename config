@@ -6,7 +6,7 @@ font pango:Source Code Pro 13px
 exec_always fcitx
 
 # wallpaper config
-exec_always "feh --bg-scale /home/oumayo/.wallpaper.png"
+exec_always "feh --bg-scale ~/.wallpaper.png"
 
 # composition manager
 exec_always compton -b --config ~/.i3/compton.conf
