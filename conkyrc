@@ -26,7 +26,7 @@ TEXT
   {"full_text": " ☇ [$battery_percent%] ","color":"\#9933CC"},
 
 # Volume
-  {"full_text": " ♪ [${execpi 0.5 pactl list sinks | grep "Volume: f" | cut -d " " -f6}] ", "color":"\#268BD2"},
+  {"full_text": " ♪ [${execpi 0.5 pactl list sinks | grep "音量：front-left:" | cut -d " " -f5}] ", "color":"\#268BD2"},
 
 # Time
   {"full_text": " ${time %b%d日 周%a}"},
