@@ -11,6 +11,9 @@ exec_always "feh --bg-scale ~/.wallpaper.png"
 # composition manager
 exec_always compton -b --config ~/.i3/compton.conf
 
+#aria2c rpc daemon
+aria2c --conf-path=/home/kasei/.aria2/aria2.conf
+
 new_window none
 focus_follows_mouse  no
 
