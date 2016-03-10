@@ -30,7 +30,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec tilda
+bindsym $mod+Return exec "lilyterm -s"
 
 # favorite applications
 bindsym $mod+1 exec chromium
@@ -146,7 +146,7 @@ bindsym XF86MonBrightnessUp exec "xbacklight +5"
 
 bindsym XF86Display exec "arandr"
 
-bindsym $mod+a exec "terminator -e ncmpcpp"
+bindsym $mod+a exec "lilyterm -e ncmpcpp"
 bindsym $mod+Shift+a exec "pavucontrol"
 
 bar {
