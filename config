@@ -33,7 +33,7 @@ floating_modifier $mod
 bindsym $mod+Return exec "lilyterm -s"
 
 # favorite applications
-bindsym $mod+1 exec chromium
+bindsym $mod+1 exec chromium-dev
 bindsym $mod+2 exec atom
 bindsym $mod+3 exec nemo
 
