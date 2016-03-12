@@ -13,7 +13,10 @@ TEXT
 ,[{"full_text": " ⌬ $cpu%/${execpi 0.5 sensors | grep 'id 0' | cut -c 18-19}℃","color": "\#DC322F"},
 
 # MEM
-  {"full_text": " ≣ [$membar] ", "color":"\#B58900"},
+  {"full_text": " ≣ ${mem} ", "color":"\#B58900"},
+
+# MPD status
+  ${if_mpd_playing}{"full_text": "${mpd_artist} - ${mpd_title}"},
 
 # Net interface&speed
   ${if_up wlp4s0}{"full_text": " ≈ ${wireless_essid wlp4s0} ","color":"\#33CC99"},
@@ -22,13 +25,12 @@ TEXT
   {"full_text": " ↓${downspeed enp5s0} ↑${upspeed enp5s0} ", "color":"\#FFFE6A"},
   $else{"full_text": " ≈ no connection ","color":"\#33CC99"},$endif$endif
 
- # Battery
-  {"full_text": " ☇ [$battery_percent%] ","color":"\#9933CC"},
+# Battery
+  {"full_text": " ☇ $battery_percent% ","color":"\#9933CC"},
 
 # Volume
-  {"full_text": " ♪ [${execpi 0.5 pactl list sinks | grep "音量：front-left:" | cut -d " " -f5}] ", "color":"\#268BD2"},
+  {"full_text": " ♪ ${execpi 0.5 pactl list sinks | grep "音量：front-left:" | cut -d " " -f5} ", "color":"\#268BD2"},
 
 # Time
-  {"full_text": " ${time %b%d日 周%a}"},
-  {"full_text": " ${time %H:%M:%S} "}
+  {"full_text": "${time %b%d日周%a %H:%M:%S}"}
 ]
