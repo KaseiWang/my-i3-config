@@ -1,4 +1,4 @@
-background        no
+#background        no
 out_to_console 	  yes
 out_to_x	  no
 update_interval	  0.5
@@ -13,10 +13,10 @@ TEXT
 ,[{"full_text": " ⌬ $cpu%/${execpi 0.5 sensors | grep 'id 0' | cut -c 18-19}℃","color": "\#DC322F"},
 
 # MEM
-  {"full_text": " ≣ ${mem} ", "color":"\#B58900"},
+  {"full_text": "≣ ${mem}", "color":"\#B58900"},
 
 # MPD status
-  ${if_mpd_playing}{"full_text": "${mpd_artist} - ${mpd_title}"},
+  ${if_mpd_playing}{"full_text": "${mpd_artist} - ${mpd_title}"}$endif,
 
 # Net interface&speed
   ${if_up wlp4s0}{"full_text": " ≈ ${wireless_essid wlp4s0} ","color":"\#33CC99"},
