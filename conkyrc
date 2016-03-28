@@ -19,11 +19,11 @@ TEXT
   ${if_mpd_playing}{"full_text": "${mpd_artist} - ${mpd_title}"}$endif,
 
 # Net interface&speed
-  ${if_up wlp4s0}{"full_text": " ≈ ${wireless_essid wlp4s0} ","color":"\#33CC99"},
-  {"full_text": " ↓${downspeed wlp4s0} ↑${upspeed wlp4s0} ", "color":"\#FFFE6A"},
-  $else${if_up enp5s0}{"full_text": " ≈ enp5s0 ","color":"\#33CC99"},
-  {"full_text": " ↓${downspeed enp5s0} ↑${upspeed enp5s0} ", "color":"\#FFFE6A"},
-  $else{"full_text": " ≈ no connection ","color":"\#33CC99"},$endif$endif
+  ${if_up wlp4s0}{"full_text": " ≈ ${wireless_essid wlp4s0 }","color":"\#33CC99"},
+  {"full_text": "W:↓${downspeed wlp4s0} ↑${upspeed wlp4s0 }", "color":"\#FFFE6A"},$endif
+  
+  ${if_up enp5s0}
+  {"full_text": "E:↓${downspeed enp5s0} ↑${upspeed enp5s0} ", "color":"\#FFFE6A"},$endif
 
 # Battery
   {"full_text": " ☇ $battery_percent% ","color":"\#9933CC"},
