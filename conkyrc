@@ -25,6 +25,9 @@ TEXT
   ${if_up enp5s0}
   {"full_text": "E:↓${downspeed enp5s0} ↑${upspeed enp5s0} ", "color":"\#FFFE6A"},$endif
 
+  ${if_up enp0s20u1}
+  {"full_text": "U:↓${downspeed enp0s20u1} ↑${upspeed enp0s20u1} ", "color":"\#FFFE6A"},$endif
+
 # Battery
   {"full_text": " ☇ $battery_percent% ","color":"\#9933CC"},
 
