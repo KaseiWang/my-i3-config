@@ -1,4 +1,4 @@
-#background        no
+background        no
 out_to_console 	  yes
 out_to_x	  no
 update_interval	  0.5
@@ -6,7 +6,7 @@ total_run_times	  0
 short_units	  yes
 pad_percents	  3
 
-override_utf8_locale yes
+override_utf8_locale no
 
 TEXT
 # CPU
@@ -26,7 +26,11 @@ TEXT
   {"full_text": "E:↓${downspeed enp5s0} ↑${upspeed enp5s0} ", "color":"\#FFFE6A"},$endif
 
   ${if_up enp0s20u1}
-  {"full_text": "U:↓${downspeed enp0s20u1} ↑${upspeed enp0s20u1} ", "color":"\#FFFE6A"},$endif
+  {"full_text": "U1:↓${downspeed enp0s20u1} ↑${upspeed enp0s20u1} ", "color":"\#FFFE6A"},$endif
+  ${if_up enp0s20u2}
+  {"full_text": "U2:↓${downspeed enp0s20u2} ↑${upspeed enp0s20u2} ", "color":"\#FFFE6A"},$endif
+  ${if_up enp0s20u3}
+  {"full_text": "U3:↓${downspeed enp0s20u3} ↑${upspeed enp0s20u3} ", "color":"\#FFFE6A"},$endif
 
 # Battery
   {"full_text": " ☇ $battery_percent% ","color":"\#9933CC"},
