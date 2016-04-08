@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Source Code Pro 13px
+font pango:Source Code Pro 10.5
 
 # enable fcitx
 exec_always fcitx
