@@ -46,7 +46,7 @@ bindsym $mod+p exec "dmenu_run -fn 'Source Code Pro-10.5'"
 bindsym $mod+Shift+p exec "~/.bin/pass-autotype-dmenu"
 
 # screen lock
-bindsym Control+$mod+l exec slimlock
+bindsym Control+$mod+l exec "i3lock -d -I5 -i .wallpaper.png"
 
 # change focus
 bindsym $mod+h focus left
