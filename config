@@ -33,67 +33,67 @@ floating_modifier $mod
 bindsym $mod+Return exec terminator
 
 # favorite applications
-bindsym $mod+1 exec chromium-dev
-bindsym $mod+2 exec atom
-bindsym $mod+3 exec nemo
+	bindsym $mod+1 exec chromium
+	bindsym $mod+2 exec atom
+	bindsym $mod+3 exec nemo
 
-# kill focused window
-bindsym $mod+c kill
+	# kill focused window
+	bindsym $mod+c kill
 
-# start dmenu (a program launcher)
-bindsym $mod+p exec "dmenu_run -fn 'Source Code Pro-10.5'"
+	# start dmenu (a program launcher)
+	bindsym $mod+p exec "dmenu_run -fn 'Source Code Pro-10.5'"
 
-bindsym $mod+Shift+p exec "~/.bin/pass-autotype-dmenu"
+	bindsym $mod+Shift+p exec "~/.bin/pass-autotype-dmenu"
 
-# screen lock
-bindsym Control+$mod+l exec "i3lock -d -I5 -i .wallpaper.png"
+	# screen lock
+	bindsym Control+$mod+l exec "i3lock -d -I5 -i .wallpaper.png"
 
-# change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+	# change focus
+	bindsym $mod+h focus left
+	bindsym $mod+j focus down
+	bindsym $mod+k focus up
+	bindsym $mod+l focus right
 
-# move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+	# move focused window
+	bindsym $mod+Shift+h move left
+	bindsym $mod+Shift+j move down
+	bindsym $mod+Shift+k move up
+	bindsym $mod+Shift+l move right
 
-# split in horizontal orientation
-bindsym $mod+v split h
+	# split in horizontal orientation
+	bindsym $mod+v split h
 
-# split in vertical orientation
-bindsym $mod+g split v
+	# split in vertical orientation
+	bindsym $mod+g split v
 
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen
+	# enter fullscreen mode for the focused container
+	bindsym $mod+f fullscreen
 
-# change container layout (tabbed, toggle split)
-bindsym $mod+n layout tabbed
-bindsym $mod+m layout toggle split
+	# change container layout (tabbed, toggle split)
+	bindsym $mod+n layout tabbed
+	bindsym $mod+m layout toggle split
 
-# container navigation
-bindsym $mod+d focus parent
-bindsym $mod+b focus child
+	# container navigation
+	bindsym $mod+d focus parent
+	bindsym $mod+b focus child
 
-# move container between displays
-bindsym $mod+semicolon move workspace to output right
+	# move container between displays
+	bindsym $mod+semicolon move workspace to output right
 
-# toggle tiling / floating
-bindsym $mod+Shift+f floating toggle
+	# toggle tiling / floating
+	bindsym $mod+Shift+f floating toggle
 
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+	# change focus between tiling / floating windows
+	bindsym $mod+space focus mode_toggle
 
-# switch to last workspace
-bindsym $mod+6 workspace back_and_forth
+	# switch to last workspace
+	bindsym $mod+6 workspace back_and_forth
 
-# switch to workspace
-bindsym $mod+q workspace 1: q
-bindsym $mod+w workspace 2: w
-bindsym $mod+e workspace 3: e
-bindsym $mod+r workspace 4: r
+	# switch to workspace
+	bindsym $mod+q workspace 1: q
+	bindsym $mod+w workspace 2: w
+	bindsym $mod+e workspace 3: e
+	bindsym $mod+r workspace 4: r
 bindsym $mod+t workspace 5: t
 bindsym $mod+y workspace 6: y
 bindsym $mod+u workspace 7: u
