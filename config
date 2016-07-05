@@ -46,7 +46,7 @@ bindsym $mod+Return exec terminator
 	bindsym $mod+Shift+p exec "~/.bin/pass-autotype-dmenu"
 
 	# screen lock
-	bindsym Control+$mod+l exec "i3lock -d -I5 -i .wallpaper.png"
+	bindsym Control+$mod+l exec "dm-tool lock"
 
 	# change focus
 	bindsym $mod+h focus left
