@@ -2,11 +2,11 @@ set $mod Mod4
 
 font pango:Source Code Pro 10.5
 
-# enable fcitx
-exec_always fcitx
-
 # wallpaper config
 exec_always "feh --bg-scale ~/.wallpaper.png"
+
+# fcitx
+exec_always fcitx-autostart
 
 # composition manager
 exec_always compton -b --config ~/.i3/compton.conf
@@ -14,7 +14,7 @@ exec_always compton -b --config ~/.i3/compton.conf
 new_window none
 focus_follows_mouse  no
 
-#don't move to neighbouring screen with hjkl
+# don't move to neighbouring screen with hjkl
 force_focus_wrapping yes
 
 set $blue #005588
@@ -33,67 +33,65 @@ floating_modifier $mod
 bindsym $mod+Return exec terminator
 
 # favorite applications
-	bindsym $mod+1 exec chromium
-	bindsym $mod+2 exec atom
-	bindsym $mod+3 exec nemo
+bindsym $mod+1 exec chromium
+bindsym $mod+2 exec atom
+bindsym $mod+3 exec nemo
+bindsym $mod+9 exec netease-cloud-music
 
-	# kill focused window
-	bindsym $mod+c kill
+# kill focused window
+bindsym $mod+c kill
 
-	# start dmenu (a program launcher)
-	bindsym $mod+p exec "dmenu_run -fn 'Source Code Pro-10.5'"
+# start dmenu (a program launcher)
+bindsym $mod+p exec "dmenu_run -fn 'Source Code Pro-11'"
+# screen lock
+bindsym Control+$mod+l exec "dm-tool lock"
 
-	bindsym $mod+Shift+p exec "~/.bin/pass-autotype-dmenu"
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
-	# screen lock
-	bindsym Control+$mod+l exec "dm-tool lock"
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
-	# change focus
-	bindsym $mod+h focus left
-	bindsym $mod+j focus down
-	bindsym $mod+k focus up
-	bindsym $mod+l focus right
+# split in horizontal orientation
+bindsym $mod+v split h
 
-	# move focused window
-	bindsym $mod+Shift+h move left
-	bindsym $mod+Shift+j move down
-	bindsym $mod+Shift+k move up
-	bindsym $mod+Shift+l move right
+# split in vertical orientation
+bindsym $mod+g split v
 
-	# split in horizontal orientation
-	bindsym $mod+v split h
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
 
-	# split in vertical orientation
-	bindsym $mod+g split v
+# change container layout (tabbed, toggle split)
+bindsym $mod+n layout tabbed
+bindsym $mod+m layout toggle split
 
-	# enter fullscreen mode for the focused container
-	bindsym $mod+f fullscreen
+# container navigation
+bindsym $mod+d focus parent
+bindsym $mod+b focus child
 
-	# change container layout (tabbed, toggle split)
-	bindsym $mod+n layout tabbed
-	bindsym $mod+m layout toggle split
+# move container between displays
+bindsym $mod+semicolon move workspace to output right
 
-	# container navigation
-	bindsym $mod+d focus parent
-	bindsym $mod+b focus child
+# toggle tiling / floating
+bindsym $mod+Shift+f floating toggle
 
-	# move container between displays
-	bindsym $mod+semicolon move workspace to output right
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
 
-	# toggle tiling / floating
-	bindsym $mod+Shift+f floating toggle
+# switch to last workspace
+bindsym $mod+6 workspace back_and_forth
 
-	# change focus between tiling / floating windows
-	bindsym $mod+space focus mode_toggle
-
-	# switch to last workspace
-	bindsym $mod+6 workspace back_and_forth
-
-	# switch to workspace
-	bindsym $mod+q workspace 1: q
-	bindsym $mod+w workspace 2: w
-	bindsym $mod+e workspace 3: e
-	bindsym $mod+r workspace 4: r
+# switch to workspace
+bindsym $mod+q workspace 1: q
+bindsym $mod+w workspace 2: w
+bindsym $mod+e workspace 3: e
+bindsym $mod+r workspace 4: r
 bindsym $mod+t workspace 5: t
 bindsym $mod+y workspace 6: y
 bindsym $mod+u workspace 7: u
@@ -135,12 +133,6 @@ bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '1%+'"
 bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '1%-'"
 bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
 bindsym XF86AudioMicMute exec "amixer -D pulse sset Capture toggle"
-
-bindsym XF86AudioPlay exec "~/.bin/player toggle"
-bindsym XF86AudioStop exec "~/.bin/player stop"
-bindsym XF86AudioNext exec "~/.bin/player next"
-bindsym XF86AudioPrev exec "~/.bin/player previous"
-
 bindsym XF86MonBrightnessDown exec "light -U 1%"
 bindsym XF86MonBrightnessUp exec "light -A 1%"
 
