@@ -20,7 +20,7 @@ TEXT
 
 # Net interface&speed
   ${if_up wlp4s0}
-  {"full_text": " ↓${downspeed wlp4s0}↑${upspeed wlp4s0 }", "color":"\#FFFE6A"},$endif
+  {"full_text": " ↓${downspeed wlp4s0}↑${upspeed wlp4s0}", "color":"\#FFFE6A"},$endif
 
   ${if_up enp5s0}
   {"full_text": " ↓${downspeed enp5s0}↑${upspeed enp5s0} ", "color":"\#FFFE6A"},$endif
@@ -33,7 +33,7 @@ TEXT
   {"full_text": "U3:↓${downspeed enp0s20u3} ↑${upspeed enp0s20u3} ", "color":"\#FFFE6A"},$endif
 
 # Battery
-  {"full_text": " $battery_percent% ","color":"\#9933CC"},
+  {"full_text": " $battery_percent%","color":"\#9933CC"},
 
 # Volume
   ${if_pa_sink_muted}{"full_text": " MUTE", "color":"\#268BD2" },
