@@ -10,20 +10,20 @@ override_utf8_locale no
 
 TEXT
 # CPU
-,[{"full_text": " ⌬ $cpu%/${execpi 0.5 sensors | grep 'id 0' | cut -c 18-19}℃","color": "\#DC322F"},
+,[{"full_text": " ⌬ ${cpu}%/${hwmon 1 temp 1}°","color": "\#DC322F"},
 
 # MEM
   {"full_text": "≣ ${mem}", "color":"\#B58900"},
 
 # MPD status
-  ${if_mpd_playing}{"full_text": "${mpd_artist} - ${mpd_title}"},$endif
+  ${if_mpd_playing}{"full_text": "${mpd_smart 100}"},$endif
 
 # Net interface&speed
   ${if_up wlp4s0}
-  {"full_text": "W:↓${downspeed wlp4s0} ↑${upspeed wlp4s0 }", "color":"\#FFFE6A"},$endif
-  
+  {"full_text": " ↓${downspeed wlp4s0}↑${upspeed wlp4s0 }", "color":"\#FFFE6A"},$endif
+
   ${if_up enp5s0}
-  {"full_text": "E:↓${downspeed enp5s0} ↑${upspeed enp5s0} ", "color":"\#FFFE6A"},$endif
+  {"full_text": " ↓${downspeed enp5s0}↑${upspeed enp5s0} ", "color":"\#FFFE6A"},$endif
 
   ${if_up enp0s20u1}
   {"full_text": "U1:↓${downspeed enp0s20u1} ↑${upspeed enp0s20u1} ", "color":"\#FFFE6A"},$endif
@@ -33,10 +33,11 @@ TEXT
   {"full_text": "U3:↓${downspeed enp0s20u3} ↑${upspeed enp0s20u3} ", "color":"\#FFFE6A"},$endif
 
 # Battery
-  {"full_text": " ☇ $battery_percent% ","color":"\#9933CC"},
+  {"full_text": " $battery_percent% ","color":"\#9933CC"},
 
 # Volume
-  {"full_text": " ♪ ${execpi 0.5 pactl list sinks | grep "音量：front-left:" | cut -d " " -f5} ", "color":"\#268BD2"},
+  ${if_pa_sink_muted}{"full_text": " MUTE", "color":"\#268BD2" },
+  ${else}{"full_text": " ${pa_sink_volume}%", "color":"\#268BD2" },$endif
 
 # Time
   {"full_text": "${time %b%d日周%a %H:%M:%S}"}

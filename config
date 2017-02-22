@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:sans 10.5
+font pango:sans 11
 
 # wallpaper config
 exec_always "feh --bg-scale ~/.wallpaper.png"
@@ -143,6 +143,7 @@ bindsym $mod+Shift+a exec "pavucontrol"
 
 bar {
         position bottom
+        font pango:awesomefont 10.5
         status_command ~/.i3/bin/conky-wrapper
         colors {
                 statusline #AAAAAA
