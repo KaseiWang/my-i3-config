@@ -9,7 +9,7 @@ exec_always "feh --bg-scale ~/.wallpaper.png"
 exec_always fcitx-autostart
 
 # composition manager
-exec_always compton -b --config ~/.i3/compton.conf
+exec_always "compton -b --config ~/.i3/compton.conf"
 
 new_window none
 focus_follows_mouse  no
@@ -42,7 +42,7 @@ bindsym $mod+9 exec netease-cloud-music
 bindsym $mod+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec "dmenu_run -fn 'Bitstream Vera Sans-12'"
+bindsym $mod+p exec "dmenu_run -fn 'Noto Sans-12'"
 # screen lock
 bindsym Control+$mod+l exec "dm-tool lock"
 
@@ -143,7 +143,7 @@ bindsym $mod+Shift+a exec "pavucontrol"
 
 bar {
         position bottom
-        font pango:awesomefont 10.5
+        font pango:barfont 11
         status_command ~/.i3/bin/conky-wrapper
         colors {
                 statusline #AAAAAA
